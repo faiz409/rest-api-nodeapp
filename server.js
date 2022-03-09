@@ -33,6 +33,9 @@ app.use('/uploads', express.static('uploads'));
 //Middelware check for error
 app.use(errorHandler);
 
+app.use('/', (req, res) => {
+    res.send(`<h1>Welcome to Rest APIs Nodejs Backend</h1>`);
+});
 
 app.listen(PORT, () => {
     console.log(`Listing on port ${PORT}`);
