@@ -1,6 +1,6 @@
 import express from "express";
 import mongoose from "mongoose";
-import { APP_PORT, DB_URL } from "./config";
+import { PORT, DB_URL } from "./config";
 import errorHandler from "./middlewares/errorHandler";
 const app = express();
 import routes from './routes';
@@ -34,7 +34,7 @@ app.use('/uploads', express.static('uploads'));
 app.use(errorHandler);
 
 
-app.listen(APP_PORT, () => {
-    console.log(`Listing on port ${APP_PORT}`);
+app.listen(PORT, () => {
+    console.log(`Listing on port ${PORT}`);
 });
 
